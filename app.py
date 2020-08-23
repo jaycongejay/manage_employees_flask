@@ -31,7 +31,7 @@ if ENV == 'dev':
     app.config['SQLALCHEMY_DATABASE_URI'] = dev_uri
 else:
     app.debug = False  # Production mode
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://atvjkeuggwajyb:1047e2ec0cb8f37bc90826535c4a1a648506867275f1864d06a46c17c03a3f70@ec2-52-86-116-94.compute-1.amazonaws.com:5432/d5sibnhlmor0b6'
+    app.config['SQLALCHEMY_DATABASE_URI'] = HEROKU_POSTGRESQL_URL
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_HEADER_TYPE'] = None
