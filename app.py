@@ -31,7 +31,7 @@ if ENV == 'dev':
     app.config['SQLALCHEMY_DATABASE_URI'] = dev_uri
 else:
     app.debug = False  # Production mode
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'PROD_DATABASE_URI'
+    app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_HEADER_TYPE'] = None
