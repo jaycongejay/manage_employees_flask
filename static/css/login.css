@@ -1,0 +1,46 @@
+body {
+  background-color: #3f3d56;
+  text-align: center;
+  margin-top: 100px;
+}
+
+body .home {
+  padding-right: 300px;
+  padding-bottom: 80px;
+}
+
+body h1 {
+  margin-left: 30px;
+  color: #218838;
+}
+
+body .formContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .formContainer form {
+  color: white;
+  margin-top: 20px;
+}
+
+body .formContainer form .form-control {
+  margin-left: 30px;
+}
+
+body .formContainer form .buttons {
+  margin-left: 90px;
+}
+
+body .formContainer form .col-sm-2 {
+  font-weight: bold;
+}
+
+body .formContainer form .btn {
+  margin: 30px;
+}
+/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,47 @@
+body .tooltip {
+  position: relative;
+  display: inline-block;
+  opacity: 1;
+}
+
+body .tooltip .tooltiptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  left: -84px;
+  top: -34px;
+}
+
+body .tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+body .headBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .headBar .well {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .headBar .well h1 {
+  margin-left: 30px;
+}
+/*# sourceMappingURL=style.css.map */

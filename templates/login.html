@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/login.css">
+	<title>Login</title>
+</head>
+<body>
+	<div class="home"><a href="/"><i class="fas fa-home fa-3x" style="color: #007bff"></i></a></div>
+	
+	<h1>Login</h1>
+	<div class="formContainer">
+		<form action="{{url_for('auth')}}" method="POST">
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Email</label>
+				<div class="col-sm-10">
+					<input name="email" type="text" class="form-control" id="email" required>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Password</label>
+				<div class="col-sm-10">
+                    <input name="password" type="password" class="form-control" id="password" required>
+				</div>
+			</div>
+			<div class="form-group row buttons">
+				<div><button type="submit" class="btn btn-success">Submit</button></div>
+				<div><a class="btn btn-secondary" href="/signUp">SignUp</a></div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

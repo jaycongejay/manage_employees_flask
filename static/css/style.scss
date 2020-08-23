@@ -1,0 +1,47 @@
+
+
+body{
+  
+  .tooltip {
+      position: relative;
+      display: inline-block;
+      opacity: 1;
+      
+      .tooltiptext {
+          visibility: hidden;
+          width: 160px;
+          background-color: black;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px 0;
+      
+          /* Position the tooltip */
+          position: absolute;
+          z-index: 1;
+          left: -84px;
+          top: -34px;
+      }
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .headBar{
+
+    display: flex;
+    justify-content: center;
+
+    .well{
+      display: flex;
+      align-items: center;
+  
+      h1{
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+
+

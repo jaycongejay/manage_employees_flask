@@ -1,0 +1,20 @@
+body {
+  margin: 50px auto;
+  min-width: 250px;
+  max-width: 250px;
+  background-color: #3f3d56;
+}
+
+body h1 {
+  margin: 50px 0;
+  color: #218838;
+}
+
+body form {
+  color: white;
+}
+
+body form .form-text {
+  color: #218838 !important;
+}
+/*# sourceMappingURL=signup.css.map */

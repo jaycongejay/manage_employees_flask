@@ -1,0 +1,98 @@
+body {
+  text-align: center;
+  margin: 30px;
+  min-width: 763px;
+}
+
+body .headerBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #3f3d56;
+  height: 6vh;
+  color: white;
+  padding: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  font-family: 'Anton', sans-serif;
+}
+
+body .headerBar a {
+  text-decoration: none;
+  color: white;
+}
+
+body #Head, body #Path16 {
+  -webkit-animation: wheel 3s ease-in-out infinite alternate;
+          animation: wheel 3s ease-in-out infinite alternate;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+body #Path13, body #Path14, body #Path15 {
+  -webkit-animation: ice 3s ease-in-out infinite alternate;
+          animation: ice 3s ease-in-out infinite alternate;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+body .login a:hover, body .logout a:hover {
+  cursor: pointer;
+  color: #218838;
+}
+
+body .employees i:hover {
+  cursor: pointer;
+  color: #6c63ff !important;
+}
+
+@-webkit-keyframes wheel {
+  from {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  to {
+    -webkit-transform: rotateZ(20deg);
+            transform: rotateZ(20deg);
+  }
+}
+
+@keyframes wheel {
+  from {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  to {
+    -webkit-transform: rotateZ(20deg);
+            transform: rotateZ(20deg);
+  }
+}
+
+@-webkit-keyframes ice {
+  0% {
+    -webkit-transform: rotateX(60deg);
+            transform: rotateX(60deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-17deg);
+            transform: rotateX(-17deg);
+  }
+}
+
+@keyframes ice {
+  0% {
+    -webkit-transform: rotateX(60deg);
+            transform: rotateX(60deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-17deg);
+            transform: rotateX(-17deg);
+  }
+}
+/*# sourceMappingURL=home.css.map */

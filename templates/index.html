@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% include 'header.html' %}
+
+
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col md-12">
+            <div class="jumbotron p-3">
+                <!-- data-toggle, data-target -->
+                <h2>Manage <b>Employee</b><button type="button" class="btn btn-success float-right tooltip" data-toggle="modal" data-target="#mymodal">Add New Employee<span class="tooltiptext">Modal from Bootstrap</span></button>
+                </h2>
+
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                        <div role="alert" class="alert alert-success alert-dismissable">
+                                {{message}}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                    <span aria-hidden="true">X</span>
+                                </button>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+
+                <table class="table table-hover table-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Action</th>
+                    </tr>
+
+                    {% for employee in employees %}
+                    <tr>
+                        <td>{{ employee.name }}</td>
+                        <td>{{ employee.email }}</td>
+                        <td>{{ employee.phone }}</td>
+                        <td>
+                            <a href="" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modalEdit{{employee.id}}">Edit</a>
+                            <a href="/delete/{{employee.id}}" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure to DELETE?')">Delete
+                            </a>
+                           
+                        </td>
+                    </tr>
+
+                    <!-- Modal for the button 'Edit' -->
+                    <div role="dialog" id="modalEdit{{employee.id}}" class="modal fade">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Update Information</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="{{url_for('update')}}" method="POST">
+                                        <div class="form-group">
+                                            <label>Name:</label>
+                                            <input type="hidden" name="id" value="{{employee.id}}">
+                                            <input value="{{employee.name}}" name="name" type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Email:</label>
+                                            <input value="{{employee.email}}" name="email" type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Phone:</label>
+                                            <input value="{{employee.phone}}" name="phone" type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary">Update</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button data-dismiss="modal" type="button" class="btn btn-secondary">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                </table>
+            </div>
+
+            <!-- Modal for the button 'Add New Employee' -->
+            <div role="dialog" id="mymodal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Add Employee</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form action="{{url_for('insert')}}" method="POST">
+                                <div class="form-group">
+                                    <label>Name:</label>
+                                    <input name="name" type="text" class="form-control" required="1">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email:</label>
+                                    <input name="email" type="email" class="form-control" required="1">
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone:</label>
+                                    <input name="phone" type="text" class="form-control" required="1">
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary">Add</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button data-dismiss="modal" type="button" class="btn btn-secondary">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

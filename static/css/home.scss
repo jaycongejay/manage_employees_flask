@@ -1,0 +1,69 @@
+
+
+body{
+    text-align: center;
+    margin: 30px;
+    min-width: 763px;
+
+    .headerBar{
+
+        display: flex;
+        justify-content: space-around;
+        background-color: #3f3d56;
+        height: 6vh;
+        color: white;
+        padding: 10px;
+        align-items: center;
+        font-size: 2em;
+        margin-bottom: 20px;
+        font-family: 'Anton', sans-serif;
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+    #Head, #Path16{
+        animation: wheel 3s ease-in-out infinite alternate;
+        transform-origin: center;
+        transform-box: fill-box;
+    }
+    
+    #Path13, #Path14, #Path15{
+        animation: ice 3s ease-in-out infinite alternate;
+        transform-origin: bottom;;
+    }
+
+    .login a:hover, .logout a:hover{
+        cursor: pointer;
+        color: #218838;
+    }
+
+    .employees i:hover{
+        cursor: pointer;
+        color: #6c63ff !important;
+    }
+}
+
+
+
+@keyframes wheel {
+
+    from{
+        transform: rotateZ(0);
+    }
+    to{
+        transform: rotateZ(20deg)
+    }
+}
+
+@keyframes ice{
+    0%{
+        transform: rotateX(60deg);
+    }
+    100%{
+        transform: rotateX(-17deg)
+    }
+}
+
